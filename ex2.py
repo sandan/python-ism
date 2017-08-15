@@ -25,8 +25,8 @@ def append_to_list(l, l3):
   
   if l.next is None and l3.next.val >= 10:
     # do a final split on the value
-    l3.next.next = ListNode(l3.val / 10)
-    l3.next.val = l3.val % 10
+    l3.next.next = ListNode(l3.next.val / 10)
+    l3.next.val = l3..next.val % 10
     
   append_to_list(l.next, l3.next)
 
