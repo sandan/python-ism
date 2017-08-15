@@ -22,6 +22,12 @@ def append_to_list(l, l3):
     carry = carry_over(l3)
 
   l3.next = ListNode(carry + l.val)
+  
+  if l.next is None and l3.next.val >= 10:
+    # do a final split on the value
+    l3.next.next = ListNode(l3.val / 10)
+    l3.next.val = l3.val % 10
+    
   append_to_list(l.next, l3.next)
 
 
@@ -58,8 +64,8 @@ def solution(l1, l2):
   #     (2) eagerly split list nodes if l_i.val >= 10
   #       as follows:
   #         if sum = l1_i.val + l2_i.val > 10, 
-  #          carry = sum / 10
-  #          l3_i.val = sum % 10
+  #          carry = sum / 10     (0 or 1)
+  #          l3_i.val = sum % 10  (0 thru 9)
   
   # pass sentinel node to be head of list
   head = ListNode(None) 
