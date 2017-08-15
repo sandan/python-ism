@@ -1,7 +1,7 @@
 # Fun with Linked Lists
 # this one will make linked lists and do the following:
 # 1) add each linked lists values
-# 2) carry over the result of the addition if needed to a new node
+# 2) carry over the result of the addition if needed to a new node ( we carry over the value % 10 in this one)
 
 class ListNode(object):
   
