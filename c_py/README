@@ -1,0 +1,8 @@
+compiling:
+gcc -fPIC -Wall -c myfuncs.c
+
+# generate your own shared lib that links with myfuncs
+gcc -shared -fPIC -Wall -o mylib.so myfuncs.o
+
+# this is useful for implementing C functions from python prototypes
+# as well as optimizing code
