@@ -1,0 +1,19 @@
+from itertools import product, combinations
+
+def is_mono_incr(x):
+  for i in range(1, len(x)):
+    if x[i - 1] > x[i]:
+      return False
+  return True
+
+def mono_inc_list(n, k)
+  x_i = (range(1, n + 1) for times in range(k))
+  res = filter(is_mono_incr, product(*x_i))
+  return list(res)
+
+def multi(n, k):
+  return combinations(range(k + n - 1), k)
+#
+# counts the number of solutions to 
+# 
+multichoose = mono_inc_list
